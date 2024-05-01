@@ -1,4 +1,9 @@
+
+//in main.js
+import 'primevue/resources/themes/aura-light-green/theme.css'
+import 'primeicons/primeicons.css'
 import { createApp } from 'vue'
+import PrimeVue from 'primevue/config';
 import './style.css'
 import App from './App.vue'
 
@@ -11,10 +16,16 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faGithub,faLinkedin)
+import Card from 'primevue/card';
+import Timeline from 'primevue/timeline';
+
+library.add(faGithub, faLinkedin)
 
 const app = createApp(App)
+app.use(PrimeVue);
 
 app.component('font-awesome-icon', FontAwesomeIcon)
+app.component('Card', Card)
+app.component('Timeline', Timeline)
 
 app.mount('#app')

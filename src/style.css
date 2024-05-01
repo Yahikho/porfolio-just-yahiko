@@ -7,7 +7,24 @@
     src: url('/fonts/PixelifySans-Regular.ttf') format('truetype');
 }
 
-:root{
+:root {
     color-scheme: light dark;
-    font-family: 'Pixelify Sans';
+    /* font-family: 'Pixelify Sans'; */
+    font-family: 'Fira Sans Condensed';
+}
+
+/* Estilos para el track */
+::-webkit-scrollbar {
+    width: 2px;
+    /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #22c55e;
+    /* Color del thumb */
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #ddd;
+    /* Color del track al pasar el mouse */
 }

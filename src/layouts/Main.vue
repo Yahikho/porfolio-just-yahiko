@@ -1,15 +1,25 @@
 <script setup lang="ts">
-import PresentationCard  from '../components/PresentationCard.vue'
+import PresentationCard from '../components/PresentationCard.vue'
+import Menu from './Menu.vue'
+import AboutProfessional from '../views/AboutProfessional.vue'
+import Experience from '../views/Experience.vue'
+import Footer from '../layouts/Footer.vue'
 </script>
 <template>
-    <main class="lg:flex lg:px-56 px-5 sm:px-24 h-screen grid grid-cols-1">
-        <div class="h-48 w-48 overflow-hidden self-center relative mx-auto">
-            <img src="/imgs/yahiko.jpg" alt="Imagen Normal"
-                class="rounded-full w-full h-full object-cover transition-transform transform duration-1000 hover:rotate-45 filter grayscale hover:filter-none " />
-            <img src="/imgs/2.png" alt="Imagen Hover"
-                class="rounded-full absolute top-0 left-0 w-full h-full object-cover opacity-0 duration-1000 transition-opacity hover:opacity-100"
-                title="¡Gracias por pasarte por aquí!" />
+    <main id="about-me">
+        <Menu />
+        <div class="lg:flex lg:px-56 px-5 sm:px-24 h-screen grid grid-cols-1 pt-16 sm:0">
+            <div class="h-48 w-48 overflow-hidden self-center relative mx-auto ">
+                <img src="/imgs/jhon.jpg" alt="Imagen Normal"
+                    class="rounded-full w-full h-full object-cover transition-transform transform duration-1000 filter grayscale hover:filter-none"
+                    title="¡Gracias por pasarte por aquí!" />
+            </div>
+            <PresentationCard />
         </div>
-        <PresentationCard />
     </main>
+    <AboutProfessional class="mx-20 mt-5"/>
+    <Experience class="mx-20 mt-5"/>
+    <Footer />
 </template>
+<style scoped>
+</style>
