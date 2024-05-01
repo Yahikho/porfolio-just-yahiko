@@ -1,22 +1,15 @@
 <script setup lang="ts">
+import PresentationCard  from '../components/PresentationCard.vue'
 </script>
 <template>
-    <main class="flex pt-20 px-48">
-        <div class="h-48 w-48 overflow-hidden rounded-full self-center">
-            <img src="/imgs/yahiko.jpg" alt="Descripción de la imagen" class="object-cover h-full w-full">
+    <main class="lg:flex lg:px-56 px-5 sm:px-24 h-screen grid grid-cols-1">
+        <div class="h-48 w-48 overflow-hidden self-center relative mx-auto">
+            <img src="/imgs/yahiko.jpg" alt="Imagen Normal"
+                class="rounded-full w-full h-full object-cover transition-transform transform duration-1000 hover:rotate-45 filter grayscale hover:filter-none " />
+            <img src="/imgs/2.png" alt="Imagen Hover"
+                class="rounded-full absolute top-0 left-0 w-full h-full object-cover opacity-0 duration-1000 transition-opacity hover:opacity-100"
+                title="¡Gracias por pasarte por aquí!" />
         </div>
-        <article class="flex-1 ml-5 self-center text-justify">
-            <h1 class="text-2xl italic text-green-500">¡¿Q' hubo?! I'm just Yahiko.</h1>
-            <p>
-                Mi nombre real es Jhon Bermúdez, y soy Desarrollador Web Full-Stack.</p>
-            <p>Me gusta hacer las cosas sencillas (algo monocromático puede ser),
-                mi tiempo de ocio lo ocupo en su mayoría en el futbol, video juegos y relaciones con los más cercanos,
-                si estoy en un entorno de confianza suelo ser muy espontáneo y random, siento mucha empatía por la vida
-                en
-                general,
-                disfruto mucho los momentos con mis cercanos, pero me gusta en su mayoría estar solo.
-            </p>
-        </article>
+        <PresentationCard />
     </main>
 </template>
-<style scoped></style>
