@@ -6,7 +6,7 @@
             <p> <a title="¿Qué es quiubo?" href="https://www.asale.org/damer/quiubo" target="_blank"
                     class="mr-1">¡¿Quiubo?!</a> I'm just Yahiko, soy Desarrollador Web Full-Stack.</p>
         </article>
-        <p class="text-justify text-l">
+        <p>
             Mi nombre real es Jhon Bermúdez,
             me gusta hacer las cosas sencillas (algo monocromático puede ser),
             mi tiempo de ocio lo ocupo en su mayoría en el futbol, video juegos y interacciones con los más cercanos,

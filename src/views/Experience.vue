@@ -43,8 +43,7 @@ const events = ref([
 </script>
 <template>
     <div id="experience">
-        <h3 class="text-green-500 text-2xl">Experiencia</h3>
-        <Timeline :value="events" align="left" class="w-full md:w-20rem">
+        <Timeline :value="events" align="alternate" class="w-full md:w-20rem">
             <template #marker="slotProps">
                 <span
                     class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1"
@@ -53,7 +52,7 @@ const events = ref([
                 </span>
             </template>
             <template #content="slotProps">
-                <Card>
+                <Card class="text-sm">
                     <template #title>
                         <p  class="text-left"><strong> {{ slotProps.item.company }}</strong> {{ slotProps.item.date }}</p>
                     </template>

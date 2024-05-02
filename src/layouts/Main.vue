@@ -2,8 +2,8 @@
 import PresentationCard from '../components/PresentationCard.vue'
 import Menu from './Menu.vue'
 import AboutProfessional from '../views/AboutProfessional.vue'
-import Experience from '../views/Experience.vue'
 import Footer from '../layouts/Footer.vue'
+import Projects from '../views/Projects.vue'
 </script>
 <template>
     <main id="about-me">
@@ -17,9 +17,8 @@ import Footer from '../layouts/Footer.vue'
             <PresentationCard />
         </div>
     </main>
-    <AboutProfessional class="mx-20 mt-5"/>
-    <Experience class="mx-20 mt-5"/>
+    <Projects class="lg:px-56 px-5 sm:px-24"/>
+    <AboutProfessional class="lg:px-56 px-5 sm:px-24" />
     <Footer />
 </template>
-<style scoped>
-</style>
+<style scoped></style>
