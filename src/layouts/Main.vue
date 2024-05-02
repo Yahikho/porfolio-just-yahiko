@@ -8,7 +8,7 @@ import Projects from '../views/Projects.vue'
 <template>
     <main id="about-me">
         <Menu />
-        <div class="lg:flex lg:px-56 px-5 sm:px-24 h-screen grid grid-cols-1 pt-16 sm:0">
+        <div class="lg:flex lg:px-56 px-5 sm:px-24 md:h-screen grid grid-cols-1 pt-16 sm:0">
             <div class="h-48 w-48 overflow-hidden self-center relative mx-auto ">
                 <img src="/imgs/jhon.jpg" alt="Imagen Normal"
                     class="rounded-full w-full h-full object-cover transition-transform transform duration-1000 filter grayscale hover:filter-none"
@@ -18,7 +18,7 @@ import Projects from '../views/Projects.vue'
         </div>
     </main>
     <Projects class="lg:px-56 px-5 sm:px-24"/>
-    <AboutProfessional class="lg:px-56 px-5 sm:px-24" />
+    <AboutProfessional class="lg:px-56 px-5 sm:px-24 pt-2" />
     <Footer />
 </template>
 <style scoped></style>

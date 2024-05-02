@@ -14,12 +14,14 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faLaravel, } from '@fortawesome/free-brands-svg-icons'
 
 import Card from 'primevue/card';
 import Timeline from 'primevue/timeline';
+import Dialog from 'primevue/dialog';
+import Galleria from 'primevue/galleria';
 
-library.add(faGithub, faLinkedin)
+library.add(faGithub, faLinkedin, faLaravel)
 
 const app = createApp(App)
 app.use(PrimeVue);
@@ -27,5 +29,7 @@ app.use(PrimeVue);
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.component('Card', Card)
 app.component('Timeline', Timeline)
+app.component('Dialog', Dialog)
+app.component('Galleria', Galleria)
 
 app.mount('#app')

@@ -7,13 +7,13 @@ interface Props {
 </script>
 <template>
     <div class="shadow-sm shadow-green-500 p-5 rounded-lg">
-        <div>
+        <div class="flex-1">
             <slot name="title" />
         </div>
-        <div class="">
+        <div class="mt-2">
             <slot name="text" />
         </div>
-        <div>
+        <div class="mt-2 lg:grid-cols-4 grid grid-cols-2 gap-2 items-center">
             <slot name="tags" />
         </div>
     </div>
