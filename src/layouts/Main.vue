@@ -17,8 +17,8 @@ import Projects from '../views/Projects.vue'
             <PresentationCard />
         </div>
     </main>
-    <Projects class="lg:px-56 px-5 sm:px-24"/>
-    <AboutProfessional class="lg:px-56 px-5 sm:px-24 pt-2" />
+    <Projects class="lg:px-56 px-5 pt-7 sm:px-24"/>
+    <AboutProfessional class="lg:px-56 px-5 sm:px-24 pt-2 mt-2" />
     <Footer />
 </template>
 <style scoped></style>

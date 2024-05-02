@@ -6,18 +6,25 @@ const visibleModal = ref(false)
 const listImgs: Ref<string[]> = ref([])
 const projects = ref([
     {
-        name: 'Sefl-Money',
-        description: `Una SPA creada en <strong class="text-green-500">Laravel</strong> junto con liveware, SQL Server y Laravel sanctum, la principal función de la app es mostrar y personalizar los ingresos y egresos de un usuario.`,
+        name: 'Sefl-Money | 2021',
+        description: `Una SPA creada en <strong class="text-green-500">Laravel</strong> su principal función de la app es mostrar y personalizar los ingresos y egresos de un usuario.`,
         skils: ['Laravel 8', 'SQL Server', 'Livewire', 'Laravel Sanctum'],
         imgs: ['/imgs/self-money.png', '/imgs/self-money-1.png', 'imgs/self-money-2.png'],
         url: 'https://github.com/Yahikho/self_money_livewire/tree/master'
     },
     {
-        name: 'SPA Imagine',
-        description: `Una SPA tipo Reest-API construida con Nest.js, Postgres, JWT, TypeORM, Vue 3, Tailwind, PrimeVue, Pinea y Vue Router su principal función es la gestión de documentos y la administración de usuarios roles y menús.`,
+        name: 'SPA Imagine | 2022 / Actualidad',
+        description: `Una SPA tipo Rest-API construida con <strong class="text-green-500">Nest.js</strong> para la gestión de documentos y la administración de usuarios roles y menús.`,
         skils: ['Nest.js', 'Postgres', 'JWT', 'TypeORM', 'Vue 3', 'Tailwind', 'Pinea', 'Vue Router', 'PrimeVue'],
         imgs: ['/imgs/imagine.png', '/imgs/imagine2.png', '/imgs/imagine3.png'],
         url: ''
+    },
+    {
+        name: 'BoxDinner | 2022',
+        description: `Una SPA tipo Rest-API construida con <strong class="text-green-500">Node.js (Express)</strong> para el manejo de caja registradora.`,
+        skils: ['Node.js', 'MySQL', 'Express', 'Prisma', 'Vue 3', 'Tailwind', 'Vue Router'],
+        imgs: ['/imgs/boxdinner.png', '/imgs/boxdinner1.png', '/imgs/boxdinner2.png'],
+        url: 'https://github.com/Yahikho/boxdinner/tree/master'
     },
 ])
 const responsiveOptions = ref([
@@ -48,15 +55,15 @@ const createListImgs = (id: number) => {
 <template>
     <div id="projects">
         <h3 class="text-green-500 text-2xl">Lista de Proyectos.</h3>
-        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 md:grid-cols-2 mt-2">
             <Card v-for="(item, index) in projects" v-bind:key="index">
                 <template #title>
-                    <p class="pb-4 flex gap-8 items-center"><strong>{{ item.name }}
+                    <p class="pb-4 flex gap-8 items-center"><strong class="text-green-500">{{ item.name }}
                         </strong><a :href="item.url" target="_blank" title="Code"><i v-if="item.url"
                                 class="pi pi-github text-2xl hover:text-green-500 cursor-pointer"></i></a>
                     </p>
-                    <div>
-                        <img :src="item.imgs[0]" alt="img-self-money" class="rounded-lg w-full"
+                    <div class="d px-9">
+                        <img :src="item.imgs[0]" alt="img-self-money" class="rounded-lg w-full cursor-pointer"
                             @click="createListImgs(index)">
                     </div>
                 </template>
@@ -64,8 +71,8 @@ const createListImgs = (id: number) => {
                     <p v-html="item.description"></p>
                 </template>
                 <template #tags>
-                    <div v-for="(tag, indexTag) in item.skils" v-bind:key="indexTag" class="rounded-lg bg-green-500">
-                        <p class="text-center px-2">{{ tag }}</p>
+                    <div v-for="(tag, indexTag) in item.skils" v-bind:key="indexTag" class="rounded-lg border-2 border-green-500 shadow-sm shadow-green-500">
+                        <p class="text-center px-2 text-sm ">{{ tag }}</p>
                     </div>
                 </template>
             </Card>
