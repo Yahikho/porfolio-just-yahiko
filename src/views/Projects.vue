@@ -6,24 +6,24 @@ const visibleModal = ref(false)
 const listImgs: Ref<string[]> = ref([])
 const projects = ref([
     {
-        name: 'Sefl-Money | 2021',
+        name: 'Self-Money | 2021',
         description: `Una SPA creada en <strong class="text-green-500">Laravel</strong> su principal función de la app es mostrar y personalizar los ingresos y egresos de un usuario.`,
         skils: ['Laravel 8', 'SQL Server', 'Livewire', 'Laravel Sanctum'],
-        imgs: ['/imgs/self-money.png', '/imgs/self-money-1.png', 'imgs/self-money-2.png'],
+        imgs: ['/porfolio-just-yahiko/imgs/self-money.png', '/porfolio-just-yahiko/imgs/self-money-1.png', '/porfolio-just-yahiko/imgs/self-money-2.png'],
         url: 'https://github.com/Yahikho/self_money_livewire/tree/master'
     },
     {
         name: 'SPA Imagine | 2022 / Actualidad',
         description: `Una SPA tipo Rest-API construida con <strong class="text-green-500">Nest.js</strong> para la gestión de documentos y la administración de usuarios roles y menús.`,
         skils: ['Nest.js', 'Postgres', 'JWT', 'TypeORM', 'Vue 3', 'Tailwind', 'Pinea', 'Vue Router', 'PrimeVue'],
-        imgs: ['/imgs/imagine.png', '/imgs/imagine2.png', '/imgs/imagine3.png'],
+        imgs: ['/porfolio-just-yahiko/imgs/imagine.png', '/porfolio-just-yahiko/imgs/imagine2.png', '/porfolio-just-yahiko/imgs/imagine3.png'],
         url: ''
     },
     {
         name: 'BoxDinner | 2022',
         description: `Una SPA tipo Rest-API construida con <strong class="text-green-500">Node.js (Express)</strong> para el manejo de caja registradora.`,
         skils: ['Node.js', 'MySQL', 'Express', 'Prisma', 'Vue 3', 'Tailwind', 'Vue Router'],
-        imgs: ['/imgs/boxdinner.png', '/imgs/boxdinner1.png', '/imgs/boxdinner2.png'],
+        imgs: ['/porfolio-just-yahiko/imgs/boxdinner.png', '/porfolio-just-yahiko/imgs/boxdinner1.png', '/porfolio-just-yahiko/imgs/boxdinner2.png'],
         url: 'https://github.com/Yahikho/boxdinner/tree/master'
     },
 ])
@@ -78,7 +78,7 @@ const createListImgs = (id: number) => {
             </Card>
         </div>
         <div class="card flex justify-content-center">
-            <Galleria v-model:visible="visibleModal" :value="listImgs" :responsiveOptions="responsiveOptions" :numVisible="9" containerStyle="max-width: 50%" :circular="true" :fullScreen="true" :showItemNavigators="true"  :showThumbnails="false">
+            <Galleria v-model:visible="visibleModal" :value="listImgs" :responsiveOptions="responsiveOptions" :numVisible="9" containerStyle="max-width: 80%" :circular="true" :fullScreen="true" :showItemNavigators="true"  :showThumbnails="false">
             <template #item="slotProps">
                 <img :src="slotProps.item" :alt="slotProps.item.alt" style="width: 100%; display: block" />
             </template>
