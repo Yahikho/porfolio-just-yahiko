@@ -3,7 +3,7 @@ import Card from '../components/Card.vue'
 import Experience from './Experience.vue'
 </script>
 <template>
-    <div id="abaout-professional">
+    <div id="about-professional">
         <h3 class="text-green-500 text-2xl">Como Profecional.</h3>
         <Card class="mt-2">
             <template #text>
